@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生信息管理系统</title>
+</head>
+<body>
+	{include file="stu/menu.html"}
+	<ul>
+		<li><a href="index.php">返回</a></li>
+	</ul>
+	<!-- menu.html引用 通过stu.php实现的引入 -->
+	<table width="600px" border='1px'>
+		<tr>
+			<th>ID</th>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+			<th>班级</th>
+			<th>操作</th>
+		</tr>
+		{foreach $vo as $v}
+			<tr>
+				<td>{$v@iteration}</td>
+				<td>{$v.name}</td>
+				<td>{$v.age}</td>
+				<td>{$v.sex}</td>
+				<td>{$v.classid}</td>
+				<td>
+					<a href="index.php?m=stu&a=delete&id={$v.id}">删除</a> | 
+					<a href="index.php?m=stu&a=edit&id={$v.id}">修改</a>
+				</td>
+			</tr>
+		{/foreach }
+	</table>
+	
+</body>
+</html>
