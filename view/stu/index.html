@@ -21,15 +21,23 @@
 		</tr>
 		{foreach $vo as $v}
 			<tr>
+<<<<<<< HEAD
 				
+=======
+>>>>>>> 51e1a6c72862c7ff86e8fdac2097b23f4a2cb8d1
 				<td>{$v@iteration}</td>
 				<td>{$v.name}</td>
 				<td>{$v.age}</td>
 				<td>{$v.sex}</td>
 				<td>{$v.classid}</td>
 				<td>
+<<<<<<< HEAD
 					<a href="index.php?m=stu&a=delete&id={$v.uid}">删除</a> | 
 					<a href="index.php?m=stu&a=edit&id={$v.uid}">修改</a>
+=======
+					<a href="index.php?m=stu&a=delete&id={$v.id}">删除</a> | 
+					<a href="index.php?m=stu&a=edit&id={$v.id}">修改</a>
+>>>>>>> 51e1a6c72862c7ff86e8fdac2097b23f4a2cb8d1
 				</td>
 			</tr>
 		{/foreach }
